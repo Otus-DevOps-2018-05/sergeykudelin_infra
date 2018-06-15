@@ -15,3 +15,6 @@ User appuser
 ProxyCommand ssh -i ~/.ssh/appuser -A appuser@35.233.125.62 nc %h %p
 ***
 Command: ssh srv01
+
+bastion_IP=35.233.125.62
+someinternalhost_IP=10.132.0.3
