@@ -1,4 +1,4 @@
-sergeykudelin Infra repository
+SergeyKudelin Infra repository/
 
 Command in one line for connect to internal server over bastion:
 ssh -i ~/.ssh/appuser -A -tt appuser@35.187.125.248 ssh -tt appuser@10.132.0.3
@@ -17,3 +17,4 @@ Command: ssh someinternalhost
 
 bastion_IP=35.187.125.248 
 someinternalhost_IP=10.132.0.3
+
