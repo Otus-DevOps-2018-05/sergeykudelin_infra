@@ -32,6 +32,7 @@ gcloud compute instances create reddit-app\
   --machine-type=g1-small \
   --tags puma-server \
   --restart-on-failure \
+  --scopes storage-ro \
   --metadata-from-file startup-script=./startup_script_reddit_app.sh
 
 *Create bucket over gsutil
@@ -52,6 +53,7 @@ gcloud compute instances create reddit-app\
   --machine-type=g1-small \
   --tags puma-server \
   --restart-on-failure \
+  --scopes storage-ro \
   --metadata startup-script-url=gs://infra-207419/startup_script_reddit_app.sh
 
 **for public https-url
