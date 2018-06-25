@@ -14,6 +14,6 @@ Restart=always
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/puma-service.service'
 
-systemctl daemon-reload
-systemctl enable puma-service
-systemctl start puma-service
+sudo systemctl daemon-reload
+sudo systemctl enable puma-service
+sudo systemctl start puma-service
