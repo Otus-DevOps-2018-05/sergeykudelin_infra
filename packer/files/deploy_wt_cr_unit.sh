@@ -3,7 +3,7 @@
 git clone -b monolith https://github.com/express42/reddit.git
 cd reddit && bundle install
 
-bash -c 'echo "[Unit] 
+sudo bash -c 'echo "[Unit] 
 Description=Reddit
 Requires=network-online.target
 After=network.target
