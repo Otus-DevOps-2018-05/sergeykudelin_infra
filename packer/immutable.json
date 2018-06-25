@@ -31,7 +31,7 @@
         {
             "type": "shell",
             "script": "files/deploy_wt_cr_unit.sh",
-            "execute_command": "sudo {{.Path}}"
+            "execute_command": "{{.Path}}"
         }
     ]
 }
