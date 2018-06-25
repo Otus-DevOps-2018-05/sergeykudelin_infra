@@ -1,4 +1,4 @@
 {
-"project_id": "infra",
-"source_image_family": "ubuntu-1604-lts"
+"project_id": "infra-207419",
+"source_image_family": "reddit-base-1529908815"
 }
