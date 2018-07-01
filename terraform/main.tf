@@ -18,7 +18,7 @@ resource "google_compute_instance" "app" {
   }
 
   metadata {
-    ssh-keys = "appuser:${file(var.public_key_path)}appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}appuser_web:${file(var.public_key_path_for_appuser_web)}"
+    ssh-keys = "appuser:${file(var.public_key_path)}appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}"
   }
 
   tags = ["reddit-app"]
