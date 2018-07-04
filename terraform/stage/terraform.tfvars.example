@@ -1,0 +1,17 @@
+project = "infra-207419"
+
+public_key_path = "~/.ssh/appuser.pub"
+
+public_key_path_for_appuser_web = "~/.ssh/appuser_web.pub"
+
+private_key_path = "~/.ssh/appuser"
+
+disk_image = "reddit-base"
+
+count = "1"
+
+app_disk_image = "reddit-app"
+
+db_disk_image = "reddit-db"
+
+app_provision_status = "true"
