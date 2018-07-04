@@ -20,3 +20,17 @@ variable app_disk_image {
   description = "Disk image for reddit app"
   default     = "reddit-app"
 }
+
+variable "app_provision_status" {
+  description = "enable or disable provision scripts"
+  default     = "true"
+}
+
+variable "puma_env" {
+  description = "Path to env file for systemd puma unit"
+  default     = "/tmp/puma.env"
+}
+
+variable "database_int_ip" {
+  description = "Database internal ip"
+}
