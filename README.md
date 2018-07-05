@@ -12,55 +12,55 @@ Theme: Terraform-2
 7. Создан модуль создания bucket-а
 
 * Самостоятельная работа
-1. Создан модуль vpс с использование его в основной конфигурации
+1. Создан модуль vpс с использование его в основной конфигурации  
     module "vpc" {
       source        = "../modules/vpc"
     }
 2. Созданы конфигурации stage и prod
 3. Удалены лишние файлы из корня проекта
-4. Параметризированы необходимые переменные
- - app_disk_image
- - db_disk_image
- - app_provision_status
- - source_ranges
+4. Параметризированы необходимые переменные  
+ - app_disk_image  
+ - db_disk_image  
+ - app_provision_status  
+ - source_ranges  
 5. Конфигурационные файлы имеют форматирование согласно terraform fmt
 
 * Задание со *
-1. Сконфигурировано хранение state в bucket-е
+1. Сконфигурировано хранение state в bucket-е  
 Пример: ../stage/backend.tf
 2. Проверено хранение state в bucket-е
 3. Проверена блокировка state в bucket-е
-4. Параметризирован запуск процедура provisioner-а
-    variable "app_provision_status" {
-      description = "enable or disable provision scripts"
-      default     = "true"
-    }
-5. Добавил действие по присвоению значения переменной DATABASE_URL с целью использованния удаленной БД вместо локальной.
-    provisioner "remote-exec" {
-      inline = [
-        "sudo echo DATABASE_URL=${var.database_int_ip} > ${var.puma_env}",
-    }
-      ]
+4. Параметризирован запуск процедура provisioner-а  
+    variable "app_provision_status" {  
+      description = "enable or disable provision scripts"  
+      default     = "true"  
+    }  
+5. Добавил действие по присвоению значения переменной DATABASE_URL с целью использованния удаленной БД вместо локальной.  
+    provisioner "remote-exec" {  
+      inline = [  
+        "sudo echo DATABASE_URL=${var.database_int_ip} > ${var.puma_env}",  
+    }  
+      ]  
 
 ## Homework №6
 
 * Создан мехнизм создания серверов инфраструктуры на базе terraform с использование input & output переменных
 Files: main.tf, outputs.tf, variables.tf
 * Выполнена самостоятельная работа
-1. Опеределена input переменная зоны
-variable "zone" {
-  description = "Zone"
-  default     = "europe-west1-b"
-}
+1. Опеределена input переменная зоны  
+variable "zone" {  
+  description = "Zone"  
+  default     = "europe-west1-b"  
+}  
 2. Определена input переменная приватного ключа для provisioner-а
 3. Разметка файлов выполнена с использование Terraform FMT
 4. Создан шаблон входных переменных terraform.tfvars.example
 * Выполнено задание со *
 1. Подключение одного ключа для нескольких пользователей.
-Вывод: необходимый формат команды
-metadata {
-    ssh-keys = "appuser:${file(var.public_key_path)}appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}appuser_web:${file(var.public_key_path_for_appuser_web)}"
-  }
+Вывод: необходимый формат команды  
+metadata {  
+    ssh-keys = "appuser:${file(var.public_key_path)}appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}appuser_web:${file  (var.public_key_path_for_appuser_web)}"  
+  }  
 Так как если определеть поочередно блоками, будет происходить перезапись последним блоков.
 2. Подключение ключа через веб-консоль приводит к ее перезатиранию после выполнение скриптов terraform-а, так как он выравниваниет инфраструктуру согласно описанным скриптам.
 3. Использовать один приватный ключ для нескольких пользователей не является верным и правильных решением.
@@ -72,17 +72,17 @@ metadata {
 ## Homework №5
 
 * Создан базовый образ виртуального сервера
-image family: reddit-base
+image family: reddit-base  
 * Создан полный образ с уже установленными и сконфигурированным сервисом
-image family: reddit-full
-* Описана команда создающая виртуальный сервер на основе полного образа средствами утилиты gcloud
-gcloud compute instances create reddit-app-full \
---boot-disk-size=10GB \
---image-family=reddit-full \
---image-project=infra-207419 \
---machine-type=f1-micro \
---tags puma-server \
---restart-on-failure
+image family: reddit-full  
+* Описана команда создающая виртуальный сервер на основе полного образа средствами утилиты gcloud  
+gcloud compute instances create reddit-app-full \  
+--boot-disk-size=10GB \  
+--image-family=reddit-full \  
+--image-project=infra-207419 \  
+--machine-type=f1-micro \  
+--tags puma-server \  
+--restart-on-failure  
 
 ##  Homework №4
 
