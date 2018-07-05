@@ -39,8 +39,8 @@ Theme: Terraform-2
     provisioner "remote-exec" {  
       inline = [  
         "sudo echo DATABASE_URL=${var.database_int_ip} > ${var.puma_env}",  
-    }  
       ]  
+    }  
 
 ## Homework №6
 
