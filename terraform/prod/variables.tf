@@ -45,5 +45,5 @@ variable db_disk_image {
 
 variable "app_provision_status" {
   description = "enable or disable provision scripts"
-  default     = "true"
+  default     = "false"
 }
