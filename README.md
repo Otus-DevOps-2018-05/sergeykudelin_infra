@@ -2,17 +2,35 @@
 
 Command in one line for connect to internal server over bastion:  
 * Method №1  
-ssh -i ~/.ssh/appuser -A -tt appuser@35.195.49.221 ssh -tt appuser@10.132.0.3  
+ssh -i ~/.ssh/appuser -A -J appuser@35.195.49ю221 appuser@10.132.0.3
 
 * Method №2:  
 ProxyCommand in my SSH config  
-https://askubuntu.com/questions/311447/how-do-i-ssh-to-machine-a-via-b-in-one-command  
+1. https://askubuntu.com/questions/311447/how-do-i-ssh-to-machine-a-via-b-in-one-command
+2. https://estl.tech/ssh-into-the-dmz-via-a-bastion-host-85f90c94a8a9
 
 ~/.ssh/config  
 Host someinternalhost  
 HostName 10.132.0.3  
 User appuser  
-ProxyCommand ssh -i ~/.ssh/appuser -A appuser@35.195.49.221  nc %h %p  
+ProxyCommand ssh -i ~/.ssh/appuser -A appuser@35.195.49.221  nc %h %p
+
+or
+
+Host *
+ ForwardAgent yes
+Host bastion
+ HostName 35.195.49.221
+ User appuser
+ IdentityFile ~/.ssh/appuser
+
+Host someinternalhost
+ HostName 10.132.0.3
+ ProxyJump bastion
+ User appuser
+ IdentityFile ~/.ssh/appuser  
+
+
 
 * Command: ssh someinternalhost  
 
