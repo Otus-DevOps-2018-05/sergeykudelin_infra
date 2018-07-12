@@ -135,7 +135,7 @@ gcloud compute firewall-rules create puma-default-server --target-tags="puma-ser
 
 * Summary info:  
 testapp_IP = 35.189.244.133  
-testapp_port = 9292
+testapp_port = 9292 
 
 ## Homework #3
 
