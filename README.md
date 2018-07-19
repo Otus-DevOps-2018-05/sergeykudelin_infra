@@ -1,7 +1,7 @@
 ## Homework 9 
 "Ansible-2"
 
-Dynamic inventory
+* Dynamic inventory
 Создал сервисный аккаунт через утилиту gcloud
 gcloud iam service-accounts create ansible --display-name "Ansible service account"
 gcloud projects add-iam-policy-binding infra-*** --member serviceAccount:ansible@infra-***.iam.gserviceaccount.com --role roles/editor
