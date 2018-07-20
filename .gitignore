@@ -7,3 +7,4 @@ variables.json
 *.retry
 key.json
 gce.ini
+jdauphant.nginx
