@@ -5,5 +5,5 @@ variables.json
 *.tfvars
 .terraform/
 *.retry
-./ansible/key.json
-./ansible/gce.ini
+key.json
+gce.ini
