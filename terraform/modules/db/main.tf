@@ -1,5 +1,5 @@
 resource "google_compute_instance" "db" {
-  name         = "reddit-db${count.index}"
+  name         = "reddit-db"
   machine_type = "g1-small"
   zone         = "${var.zone}"
   count        = "${var.count}"
