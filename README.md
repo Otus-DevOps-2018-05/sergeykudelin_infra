@@ -8,8 +8,7 @@ Ansible-3
   так же рассмотрен вариант, получение данного реквизита через hostvars динамической инвентаризации   
     db_host: "{{ hostvars['reddit-db']['gce_private_ip'] }}"
 
-
-## Homework 9 
+# Homework 9 
 Ansible-2
 
 * Dynamic inventory
