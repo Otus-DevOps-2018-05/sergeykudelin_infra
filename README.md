@@ -1,4 +1,4 @@
-## Homework 9 
+## Homework 9
 Ansible-2
 
 * Dynamic inventory
@@ -8,9 +8,10 @@ gcloud projects add-iam-policy-binding infra-*** --member serviceAccount:ansible
 gcloud iam service-accounts keys create key.json --iam-account=ansible@infra-***.iam.gserviceaccount.com  
 - Для формирования секрета доставил последнюю версию libcloud  
 pip install apache-libcloud  
-- Сформировал и оставил gce.ini_example  
+- Сформировал и оставил gce.ini_example
 - Выборка для текущих инстантов:  
-./gce.py --instance-tags reddit-app,reddit-db --refresh-cache  
+./gce.py --instance-tags reddit-app,reddit-db --refresh-cache
+
 
 ## Homework 8
 
