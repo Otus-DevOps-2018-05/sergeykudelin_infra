@@ -42,12 +42,12 @@ resource "null_resource" "app" {
 
   provisioner "file" {
     source      = "${path.module}/files/puma.service"
-    destination = "/tmp/puma.service"
+    destination = "${var.puma_env}"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "sudo echo DATABASE_URL=${var.database_int_ip} > ${var.puma_env}",
+      "sudo export DATABASE_URL=${var.database_int_ip} > ${var.puma_env}",
     ]
   }
 
