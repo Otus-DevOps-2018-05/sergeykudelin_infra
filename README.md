@@ -1,6 +1,11 @@
 ## Homework 11
 Ansible-4
 
+* Локальная разработка при помощи Vagrant - в Vagrantfile описаны конфигурации appserver, dbserver
+* Добавлен плейбук base.yml для ansible bootstrap на хостах, где не установлен python
+* Доработана роль db для использования в Vagrant, в которую добавлены таски config_mongo.yml, install_mongo.yml
+* В Vagrantfile добавлены ansible провижинеры для appserver и dbserver
+* Добавлены тесты роли db через molecula и testinfra
 
 ## Homework 10
 Ansible-3
