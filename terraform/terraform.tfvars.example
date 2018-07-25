@@ -1,4 +1,4 @@
-project = "infra-207419"
+project = "infra"
 
 public_key_path = "~/.ssh/appuser.pub"
 

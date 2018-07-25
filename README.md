@@ -26,7 +26,8 @@ pip install apache-libcloud
  - Второй вариант так как каталог был удален, репозиторий был склонирован и результат playbook-а отразил что были внесены изменения на целевой сервер.
 
 Задание со *
-В процессе .... 
+ansible all -m ping 
+*использует файл динамической инвентаризации прописанный в конфигурационном файле ansible.
 
 ## Homework 7
 
@@ -165,7 +166,7 @@ gcloud compute firewall-rules create puma-default-server --target-tags="puma-ser
 
 * Summary info:  
 testapp_IP = 35.189.244.133  
-testapp_port = 9292
+testapp_port = 9292 
 
 ## Homework #3
 
