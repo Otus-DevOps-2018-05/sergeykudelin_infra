@@ -4,4 +4,7 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
-.vscode/*
+*.retry
+key.json
+gce.ini
+.vscode/

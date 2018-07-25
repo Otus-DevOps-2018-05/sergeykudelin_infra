@@ -1,3 +1,18 @@
+## Homework 9
+* Ansible-2
+
+* Dynamic inventory
+- Создал сервисный аккаунт через утилиту gcloud  
+gcloud iam service-accounts create ansible --display-name "Ansible service account"  
+gcloud projects add-iam-policy-binding infra-*** --member serviceAccount:ansible@infra-***.iam.gserviceaccount.com --role roles/editor  
+gcloud iam service-accounts keys create key.json --iam-account=ansible@infra-***.iam.gserviceaccount.com  
+- Для формирования секрета доставил последнюю версию libcloud  
+pip install apache-libcloud  
+- Сформировал и оставил gce.ini_example
+- Выборка для текущих инстантов:  
+./gce.py --instance-tags reddit-app,reddit-db --refresh-cache
+
+
 ## Homework 8
 
 * Основное задание
