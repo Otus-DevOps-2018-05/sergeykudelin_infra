@@ -1,5 +1,5 @@
 ## Homework 9
-Ansible-2
+* Ansible-2
 
 * Dynamic inventory
 - Создал сервисный аккаунт через утилиту gcloud  
