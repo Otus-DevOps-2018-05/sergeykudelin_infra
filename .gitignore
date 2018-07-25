@@ -3,16 +3,17 @@ variables.json
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
-.terraform/
+.terraform
 *.retry
 key.json
 gce.ini
 jdauphant.nginx
 vault.key
 # Vagrant & molecule
-.vagrant/
+.vagrant
 *.log
 *.pyc
 .molecule
 .cache
 .pytest_cache
+.vscode

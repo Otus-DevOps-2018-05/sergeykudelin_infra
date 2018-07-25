@@ -1,8 +1,8 @@
 {
     "variables":
 	{
-	    "project_id":"null",
-	    "source_image_family":"null", 
+	    "project_id":null,
+	    "source_image_family":null, 
 	    "machine_type": "g1-small",
 	    "image_description":"Reddit db image",
 	    "disk_size": "10", 
