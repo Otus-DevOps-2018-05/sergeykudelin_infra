@@ -1,6 +1,15 @@
-## Homework 9
-* Ansible-2
+## Homework 10
+Ansible-3
 
+* Создано разделение на роли
+* Создано окружение с использованием динамической инвентаризации через gce.py
+* В переменном окружениb передается внутренний адрес БД, через получение переменной при сборе фактов по серверу mongodb
+    db_host: "{{ hostvars['reddit-db']['ansible_all_ipv4_addresses'] }}",  
+  так же рассмотрен вариант, получение данного реквизита через hostvars полученного при динамической инвентаризации
+    db_host: "{{ hostvars['reddit-db']['gce_private_ip'] }}"
+
+# Homework 9 
+* Ansible-2
 * Dynamic inventory
 - Создал сервисный аккаунт через утилиту gcloud  
 gcloud iam service-accounts create ansible --display-name "Ansible service account"  
