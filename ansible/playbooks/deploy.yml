@@ -1,3 +1,4 @@
+---
 - name: Deploy App
   hosts: tag_reddit-app
   vars:
