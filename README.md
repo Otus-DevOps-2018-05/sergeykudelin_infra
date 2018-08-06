@@ -22,9 +22,9 @@ Ansible-3
     db_host: "{{ hostvars['reddit-db']['gce_private_ip'] }}"
 
 ## Homework 9
-
 Ansible-2
 
+* Ansible-2
 * Dynamic inventory
 
 * Создал сервисный аккаунт через утилиту gcloud

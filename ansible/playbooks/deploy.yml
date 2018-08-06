@@ -2,7 +2,6 @@
   hosts: tag_reddit-app
   vars:
     deploy_user: appuser
-
   tasks:
     - name: Fetch the latest version of application code
       git:
@@ -14,8 +13,8 @@
     - name: bundle install
       bundler:
         state: present
-        chdir: "/home/{{ deploy_user }}/reddit"
-
+        chdir: /home/appuser/reddit
+       
   handlers:
   - name: restart puma
     become: true
