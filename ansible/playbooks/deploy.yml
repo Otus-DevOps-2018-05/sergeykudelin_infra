@@ -15,7 +15,6 @@
       bundler:
         state: present
         chdir: /home/appuser/reddit
-       
   handlers:
   - name: restart puma
     become: true
